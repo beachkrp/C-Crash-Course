@@ -15,8 +15,8 @@ namespace Variables
 			//declare and unspecified variable
 			var subtraction = randomNumber.Next(2,10);
 
-			//variable to hold the answer
-			int answer;
+			//inialize the variable to hold the answer
+			int answer = firstNumber * secondNumber - subtraction;
 			
 			string prompt = ". Press Enter when Ready";
 
@@ -46,7 +46,7 @@ namespace Variables
 			Console.ReadKey();
 
 			//Answer 
-			answer = firstNumber * secondNumber - subtraction;
+			
 			Console.WriteLine("The answer is " + answer);
 
 		}
