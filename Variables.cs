@@ -5,14 +5,18 @@ namespace Variables
 	class Program
 	{
 		static void Main(String[] args)
-		{
+		{	
+			//Introducing a random element
+			Random randomNumber = new Random();
+
 			//define some variables
-			int firstNumber = 2;
-			int secondNumber = 5;
+			int firstNumber = randomNumber.Next(2,10);
+			int secondNumber = randomNumber.Next(2,10);
 			//declare and unspecified variable
-			var subtraction = 7;
+			var subtraction = randomNumber.Next(2,10);
 
 			//variable to hold the answer
+			int answer;
 			
 			string prompt = ". Press Enter when Ready";
 
@@ -37,12 +41,13 @@ namespace Variables
 			Console.ReadKey();
 
 			//Output
-			Console.WriteLine("Now Subtract" + subtraction + prompt);
+			Console.WriteLine("Now Subtract " + subtraction + prompt);
 			//User input
 			Console.ReadKey();
 
 			//Answer 
-			Console.WriteLine("The answer is " + (firstNumber * secondNumber - subtraction));
+			answer = firstNumber * secondNumber - subtraction;
+			Console.WriteLine("The answer is " + answer);
 
 		}
 	}
